@@ -1,0 +1,14 @@
+Construire un container Docker: docker build -t nginx .
+Connaitre les images acutelles apres un build: docker image ls
+Demarrer une image: docker run -it <image_name> (-it permet d'ouvrir le terminal du container): il le lance mais pas acces au terminal
+Connaitre les containers actuellement lancer: docker ps
+Connaitre les containers actuel et stoper: docker ps -a
+Quitter le terminal d'un container: exit
+Mettre a jour le container dans son terminal: apt update, apt upgrade
+
+comme un make re:
+	docker build --no-cache -t nginx .
+docker run -d nginx
+docker run -p 8080:80 nginx
+docker exec -it "CONTAINER ID" bash
+docker stop "ID CONTAINER"
