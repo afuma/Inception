@@ -5,6 +5,9 @@ Commande pour configurer l'heure manuellement sinon la commande "sudo apt update
 
 Pour installer sa VM:
 	sudo apt install make
+	sudo apt install docker.io
+	start docker: sudo systemctl start docker
+	enable Docker to start automatically: sudo systemctl enable docker
 	sudo apt  install docker-compose
 
 
