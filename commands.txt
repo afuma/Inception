@@ -1,3 +1,9 @@
+
+Pour installer sa VM:
+	sudo apt install make
+	sudo apt  install docker-compose
+
+
 Construire un container Docker: docker build -t nginx .
 Connaitre les images acutelles apres un build: docker image ls
 Demarrer une image: docker run -it <image_name> (-it permet d'ouvrir le terminal du container): il le lance mais pas acces au terminal
@@ -12,3 +18,9 @@ docker run -d nginx
 docker run -p 8080:80 nginx
 docker exec -it "CONTAINER ID" bash
 docker stop "ID CONTAINER"
+docker logs + [nom container]
+
+Pour build le fichier .yml: docker-compose -f  <path_docker_compose>  -d —build
+Pour l’arrêter :    		docker-compose -f  <path_docker_compose>  stop
+Pour supprimer le build :   docker-compose -f  <path_docker_compose>  down -v
+Clean tout(si y a des problemes): docker system prune -af 
