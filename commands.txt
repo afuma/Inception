@@ -2,10 +2,9 @@ Commande pour configurer l'heure manuellement sinon la commande "sudo apt update
 	sudo timedatectl set-ntp false
 	sudo timedatectl set-time 'YYYY-MM-DD HH:MM:SS'
 	sudo timedatectl set-ntp false
-
+	
 Pour installer sa VM:
 	sudo apt install make
-	sudo apt  install docker-compose
 
 Pour installer Docker sur Ubuntu:
 	sudo apt update

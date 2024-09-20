@@ -10,6 +10,7 @@ clean:
 	docker-compose -f $(FILE) down
 
 fclean: clean
+	@echo "DATA=$(DATA)"
 	rm -rf $(DATA)
 	docker system prune -af
 
