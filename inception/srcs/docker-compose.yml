@@ -9,15 +9,15 @@ services:
             context: requirements/mariadb
             dockerfile: Dockerfile
         volumes:
-            - mariadb:/var/lib/mysql
-        restart: unless-stopped
+            - /home/edesaint/data/mariadb:/var/lib/mysql
+        restart: always
         expose:
             - "3306"
     
     nginx:
         container_name: nginx
         volumes:
-            - wordpress:/var/www/wordpress
+            - /home/edesaint/data/wordpress:/var/www/wordpress
         networks:
             - inception
         depends_on:
@@ -28,13 +28,13 @@ services:
         env_file: .env
         ports:
             - "443:443"
-        restart: on-failure
+        restart: always
     
     wordpress:
         container_name: wordpress
         env_file: .env
         volumes:
-            - wordpress:/var/www/wordpress
+            - /home/edesaint/data/wordpress:/var/www/wordpress/wp-content
         networks:
             - inception
         build: 
@@ -42,7 +42,7 @@ services:
             dockerfile: Dockerfile
         depends_on:
             - mariadb
-        restart: on-failure
+        restart: always
         expose: 
             - "9000"
 
