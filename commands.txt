@@ -24,6 +24,8 @@ Pour installer Docker-compose: (deja avoir installer Docker):
 	sudo chmod +x /usr/local/bin/docker-compose
 	docker-compose --version
 
+Pour construire les volumes:
+	mkdir -p /home/edesaint/data/{wordpress,mariadb}
 Construire un container Docker: docker build -t nginx .
 Connaitre les images acutelles apres un build: docker image ls
 Demarrer une image: docker run -it <image_name> (-it permet d'ouvrir le terminal du container): il le lance mais pas acces au terminal
