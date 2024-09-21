@@ -40,3 +40,5 @@ fi
 
 # Démarrer MariaDB en avant-plan
 exec /usr/sbin/mysqld --user=mysql --console --skip-name-resolve --skip-networking=0
+
+Starting MariaDB database server: mariadbd . .. ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (2) 240921 16:53:09 mysqld_safe Logging to syslog. 240921 16:53:09 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
