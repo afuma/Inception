@@ -1,3 +1,8 @@
+
+a voir: le parefeu
+mettre des messages de logs pour voir si tout est bien installer/initialiser
+faire tourner les conteneurs 1 a 1
+
 #!/bin/sh
 
 MYSQL_DATABASE=${SQL_DATABASE}
