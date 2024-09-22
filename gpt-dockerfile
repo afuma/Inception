@@ -1,0 +1,30 @@
+# Étape 1 : Utiliser une image de base légère (par exemple, Debian)
+FROM debian:latest
+
+# Étape 2 : Mettre à jour le système et installer les dépendances nécessaires pour construire Nginx
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpcre3 \
+    libpcre3-dev \
+    zlib1g \
+    zlib1g-dev \
+    libssl-dev \
+    wget \
+    curl
+
+# Étape 3 : Télécharger et extraire les sources de Nginx
+RUN wget http://nginx.org/download/nginx-1.25.2.tar.gz && \
+    tar -zxvf nginx-1.25.2.tar.gz && \
+    cd nginx-1.25.2 && \
+    ./configure --with-http_ssl_module --prefix=/usr/local/nginx && \
+    make && \
+    make install
+
+# Étape 4 : Copier ta page HTML personnalisée dans le dossier par défaut de Nginx
+COPY index.html /usr/local/nginx/html/
+
+# Étape 5 : Exposer le port 80 pour accéder au serveur Nginx
+EXPOSE 80
+
+# Étape 6 : Définir le point d'entrée pour démarrer Nginx
+CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
