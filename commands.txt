@@ -6,6 +6,11 @@ checker tous les logs (ceux de wordpress et nginx)
 
 ----------------------------------------------------------------------------------------------------
 
+Commande pour installer google-chrome:
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt-get install -f
+
 Commande pour configurer l'heure manuellement sinon la commande "sudo apt update" ne fonctionne pas:
 	sudo timedatectl set-ntp false
 	sudo timedatectl set-time 'YYYY-MM-DD HH:MM:SS'
