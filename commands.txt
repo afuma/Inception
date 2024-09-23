@@ -1,3 +1,11 @@
+
+Pour les errors de Hlamnaou:
+Utiliser net-tools pour verifier la connexion reseau (502 bad gateway)
+aller sur le discord, chercher "bad" puis tout lire
+checker tous les logs (ceux de wordpress et nginx)
+
+----------------------------------------------------------------------------------------------------
+
 Commande pour configurer l'heure manuellement sinon la commande "sudo apt update" ne fonctionne pas:
 	sudo timedatectl set-ntp false
 	sudo timedatectl set-time 'YYYY-MM-DD HH:MM:SS'
