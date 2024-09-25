@@ -5,6 +5,9 @@ aller sur le discord, chercher "bad" puis tout lire
 checker tous les logs (ceux de wordpress et nginx)
 
 ----------------------------------------------------------------------------------------------------
+
+Pour verifier les volumes
+------------------------
 docker-compose -f /home/edesaint/Desktop/Inception/srcs/docker-compose.yml config
 ou en se placant dans le dossier ou se situe le fichier docker-compose.yml: docker-compose config
 
@@ -12,6 +15,18 @@ docker inspect nginx: Pour voir que le volume est partager avec wordpress
 docker volume inspect wordpress
 docker network ls
 docker network inspect inception
+
+Pour la base de donnee
+--------------
+aller dans le conteneur mariadb: docker exec -it mariadb
+mariadb -u dbuser -p, puis entrer: dbpassword
+mariadb -u root -p, puis entrer: password
+
+Pour le site
+--------------
+pouvoir se connecter avec admin et user1
+
+------------------------------------------------------------------------------------------------
 
 Commande pour installer google-chrome:
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
