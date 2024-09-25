@@ -3,7 +3,8 @@ sudo docker inspect network nginx
 verifier les volumes
 voir tuto notion: allow openSSH
 
-
+probleme de socket (mysqld.sock) regler en installant et activant openssh-server (voir tuto)
+probleme d'inaccessibilite root (en supprimant les volumes)
 
 
 cd /home/edesaint/
