@@ -1,3 +1,11 @@
+
+sudo docker inspect network nginx
+verifier les volumes
+voir tuto notion: allow openSSH
+
+
+
+
 cd /home/edesaint/
 mkdir data
 cd data
