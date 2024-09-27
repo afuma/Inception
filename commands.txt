@@ -1,4 +1,7 @@
 
+tuto aide meuf avec l'allemand: https://yahuitang227.notion.site/Inception-Tutorial-4bb342b48c5f45eb87ade95ee6361eb0#3fbe345b41b4478d9c17418a8e57cc84
+-----------------------------
+
 Pour les errors de Hlamnaou:
 Utiliser net-tools pour verifier la connexion reseau (502 bad gateway)
 aller sur le discord, chercher "bad" puis tout lire
